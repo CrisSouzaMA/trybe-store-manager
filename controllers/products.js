@@ -9,10 +9,10 @@ const getAll = async (_req, res) => {
 const getById = async (req, res) => {
   try {
   const { id } = req.params;
-  const productId = await productService.getById(id);
+  const productId = await productService.getById(Number(id));
   return res.status(200).json(productId);
   } catch (e) {
-    return res.status(404).end()
+    return res.status(404).json({ message: e.message });
   }
 }
 
