@@ -1,0 +1,36 @@
+{
+  "name": "node-store-manager",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CrisSouzaMA/trybe-store-manager.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/CrisSouzaMA/trybe-store-manager/issues"
+  },
+  "homepage": "https://github.com/CrisSouzaMA/trybe-store-manager#readme",
+  "dependencies": {
+    "body-parser": "^1.19.0",
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-rescue": "^1.1.26",
+    "jest": "^26.4.1",
+    "joi": "^17.6.0",
+    "mysql2": "^2.3.0"
+  },
+  "devDependencies": {
+    "chai": "^4.3.4",
+    "mocha": "^8.4.0",
+    "mysql-import": "^5.0.21",
+    "sinon": "^11.1.1",
+    "nodemon": "^2.0.4"
+  }
+}
