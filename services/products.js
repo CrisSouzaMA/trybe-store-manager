@@ -11,7 +11,7 @@ const getById = async (id) => {
 }
 
 const getByName = async (name) => {
-  const searchProduct = await productModel.getByName(name);
+  const [searchProduct] = await productModel.getByName(name);
   return searchProduct; 
 }
 
@@ -23,9 +23,18 @@ const create = async ({ name, quantity }) => {
   return newProd;
 }
 
+const update = async ({ id, name, quantity }) => {
+  const checkId = await getById(id);
+  if (checkId === undefined) throw new Error('Product not found');
+
+  const updateProd = await productModel.update({ id, name, quantity });
+  return updateProd;
+}
+
 module.exports = {
   getAll,
   getById,
   getByName,
   create,
+  update,
 }
