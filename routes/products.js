@@ -9,7 +9,7 @@ const productMiddleware = require('../middlewares/validationProduct');
 router.get('/', productController.getAll);
 router.get('/:id', productController.getById);
 
-router.delete('/:id', productController.delete);
+router.delete('/:id', productController.delet);
 
 router.use(productMiddleware.validateProduct);
 
