@@ -9,6 +9,8 @@ const saleMiddleware = require('../middlewares/validationSale');
 router.get('/', saleController.getAll);
 router.get('/:id', saleController.getById);
 
+router.delete('/:id', saleController.delet);
+
 router.use(saleMiddleware.validateSale);
 
 router.post('/', saleController.create);
