@@ -10,7 +10,22 @@ const getById = async (id) => {
   return productId;
 }
 
+const getByName = async (name) => {
+  const searchProduct = await productModel.getByName(name);
+  return searchProduct; 
+}
+
+const create = async ({ name, quantity }) => {
+  const checkP = await getByName(name);
+  if(checkP !== undefined && checkP.name === name) throw new Error('Product already exists');
+
+  const newProd = await productModel.create({ name, quantity });
+  return newProd;
+}
+
 module.exports = {
   getAll,
   getById,
+  getByName,
+  create,
 }
