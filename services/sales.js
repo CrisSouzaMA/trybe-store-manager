@@ -23,8 +23,17 @@ const create = async (arrayOfSales) => {
   return createSales;
 };
 
+const update = async ({ id, arrayOfSales }) => {
+  const checkId = await getById(id);
+  if (checkId === undefined) throw new Error('Product not found');
+
+  const upSale = await saleModel.update(id, arrayOfSales);
+  return upSale;
+}
+
 module.exports = {
   getAll,
   getById,
   create,
+  update,
 }
