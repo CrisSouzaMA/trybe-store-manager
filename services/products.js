@@ -31,10 +31,18 @@ const update = async ({ id, name, quantity }) => {
   return updateProd;
 }
 
+const delet = async (id) => {
+  const checkId = await getById(id);
+  if (checkId === undefined) throw new Error('Product not found');
+
+  await productModel.delet(id);
+}
+
 module.exports = {
   getAll,
   getById,
   getByName,
   create,
   update,
+  delet,
 }
