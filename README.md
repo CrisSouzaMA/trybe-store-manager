@@ -5,13 +5,13 @@
 <br>
 <br>
 
-## What is the project about?
+## Sobre o projeto
 
-This project was made to practice advanced NodeJS lessons.
+Esse projeto foi desenvolvido para a implementação de uma API Rest aplicando conteúdos avançados de NodeJS.
 
 ---
 
-# Technologies used
+## Tecnologias Usadas:
 - [SQL](https://www.w3schools.com/sql/)
 - [MySQL Workbench](https://www.mysql.com/products/workbench/)
 - [NodeJS](https://nodejs.org/en/about/)
@@ -19,7 +19,7 @@ This project was made to practice advanced NodeJS lessons.
 
 #
 
-# Developed skills
+## Lições desenvolvidas:
  - Entender o funcionamento da camada de Model;
  - Delegar responsabilidades específicas para essa camada;
  - Conectar sua aplicação com diferentes bancos de dados;
